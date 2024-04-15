@@ -1,0 +1,113 @@
+WidgetExample:
+<WidgetExample>:
+    cols:2
+    ToggleButton:
+        text: "off"
+        on_state: root.on_toggle_button_state(self)
+        size_hint: None,None
+        height: "100dp"
+        width: "100dp"
+        pos_hint: {"y":  1}
+
+
+    Button:
+        text: "count"
+        on_press:root.on_button_click()
+
+
+    Label:
+        text: root.my_text
+        font_name: "fonts/lcd.ttf"
+        font_size: "100dp"
+        color: 0,  .5, .2, 1
+
+
+
+
+
+
+   #     StackLayoutExample:
+   #     GridLayoutExample:
+
+   #     BoxLayoutExample:
+   #     AnchorLayoutExample:
+
+
+
+
+
+<GridLayoutExample>:
+
+    cols: 3
+    Button:
+        text: "a1"
+        size_hint: .1, .1
+    BoxLayoutExample:
+        size_hint: .1, .1
+
+    Button:
+        text: "b3"
+
+    Button:
+        text: "a1"
+        size_hint: .1, .1
+    Button:
+        text: "b2"
+    AnchorLayoutExample:
+        size_hint: .1, .1
+
+
+
+
+
+
+
+<AnchorLayoutExample>:
+    #   top, bottom, center
+    anchor_y: "top"
+    #   right, left, center
+    anchor_x: "center"
+    BoxLayout:
+        size_hint: .2, .2
+        Button:
+            text: "a1"
+        Button:
+            text: "b2"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BoxLayoutExample>:
+    orientation: "horizontal"
+
+    Button:
+        text: "a"
+
+        color: 0, 1, 1 ,1
+        size_hint: .5, .5
+
+        pos_hint: {"center_y":  .5}
+    BoxLayout:
+        orientation: "vertical"
+        spacing: "10dp"
+
+
+        Button:
+            text: "b1"
+        Button:
+            text: "b2"
+        Button:
+            text: "b3"
+
+    Label:
+        text: "c"
